@@ -64,20 +64,16 @@ public class MoradorDAO extends DBController{
     }
      public void alterar(Morador morador){
         abrirConexao();
-        
-        PreparedStatement pStatement;
-        String alterarDados = "UPDATE morador SET nome = ?, torre = ?, apartamento = ? , telefone = ?, ultimoAcesso = ?" +
-                                    " WHERE cpf = ?";
+         
+        String alterarDados = "UPDATE morador SET nome = '" + morador.getNome() + "', torre = " + morador.getTorre()
+                                + ", apartamento = " + morador.getApartamento() + " , telefone = '" + morador.getTelefone()
+                                + "', ultimoAcesso = '" + morador.getUltimoAcesso() + "'"
+                                + " WHERE morador.cpf = '"+ morador.getCpf() + "'";
         try {
-            pStatement = connection.prepareStatement(alterarDados);
-            pStatement.setString(1, morador.getNome());
-            pStatement.setInt(2, morador.getTorre());
-            pStatement.setInt(3, morador.getApartamento());
-            pStatement.setString(4, morador.getTelefone());
-            pStatement.setString(5, morador.getUltimoAcesso());
-            pStatement.setString(6, morador.getCpf());
-            int n = pStatement.executeUpdate();
-            System.out.println(n);
+            connection.setAutoCommit(false);
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate(alterarDados);
+            connection.commit();
         } catch (SQLException ex) {
             Logger.getLogger(MoradorDAO.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
@@ -89,6 +85,7 @@ public class MoradorDAO extends DBController{
         abrirConexao();
         String excluirUsuario = "DELETE FROM morador WHERE (cpf = '" + cpf + "')";
         try {
+            connection.setAutoCommit(false);
             Statement stmt = connection.createStatement();
             stmt.executeUpdate(excluirUsuario);
             connection.commit();

@@ -2,14 +2,10 @@ package controller;
 
 import DAO.MoradorDAO;
 import java.util.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Morador;
-import view.MainView;
+
 
 public class MoradorController {
     
@@ -73,7 +69,7 @@ public class MoradorController {
             JOptionPane.showMessageDialog(null, "Morador não encontrado");
             return null;
         }      
-        return new Morador(torre, apartamento, telefone, null, null, ultimoAcesso);
+        return new Morador(torre, apartamento, telefone, nome, cpf, ultimoAcesso);
     }   
     
     
@@ -109,9 +105,9 @@ public class MoradorController {
             MoradorDAO mDAO = new MoradorDAO();
             mDAO.alterar(morador);
             JOptionPane.showMessageDialog(null, "Morador alterado");
-
+        }else{
+            JOptionPane.showMessageDialog(null, "Morador não encontrado");
         }
-        JOptionPane.showMessageDialog(null, "Morador não encontrado");
     }
     
     public static void excluirMorador(String cpf){
@@ -126,14 +122,5 @@ public class MoradorController {
             mDAO.excluir(cpf);
             JOptionPane.showMessageDialog(null, "Morador Excluido!");
         }
-    }
-    
-    public static boolean atualizarUltimoAcesso(String cpf){
-        if(cpf.equals("") || cpf.length() != 11 || cpf.matches("[A-Z]") || cpf.matches("[a - z]")){
-            JOptionPane.showMessageDialog(null, "Rever 'CPF'");
-            return false;
-        }
-        
-        return false;
     }
 }

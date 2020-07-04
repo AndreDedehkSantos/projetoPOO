@@ -50,13 +50,11 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JTextField();
-        btnAttData = new javax.swing.JButton();
         btnPesquisar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         txtUltimoAcesso = new javax.swing.JTextField();
-        btnVoltar = new javax.swing.JButton();
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +74,7 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Apartamento:");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
@@ -136,15 +134,6 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
             }
         });
 
-        btnAttData.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        btnAttData.setText("Atualizar");
-        btnAttData.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnAttData.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAttDataActionPerformed(evt);
-            }
-        });
-
         btnPesquisar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -178,15 +167,6 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
         txtUltimoAcesso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUltimoAcessoActionPerformed(evt);
-            }
-        });
-
-        btnVoltar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        btnVoltar.setText("Voltar");
-        btnVoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -225,8 +205,6 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtNome))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAttData, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,10 +215,6 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
                                 .addGap(8, 8, 8)
                                 .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,22 +232,19 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(txtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAttData, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTorre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(txtApartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -346,24 +317,21 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefoneActionPerformed
 
-    private void btnAttDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttDataActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAttDataActionPerformed
-
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        // TODO add your handling code here:
+        String cpf = txtCpf.getText();
+        MoradorController.excluirMorador(cpf);
     }//GEN-LAST:event_btnExcluirActionPerformed
     
-    public Morador pesquisado;
+    
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-        pesquisado.setNome(txtNome.getText());
-        pesquisado.setCpf(txtCpf.getText());
-        pesquisado.setTelefone(txtTelefone.getText());
-        pesquisado.setUltimoAcesso(txtUltimoAcesso.getText());
+        String nome = txtNome.getText();
+        String cpf = txtCpf.getText();
+        String telefone = txtTelefone.getText();
+        String data = txtUltimoAcesso.getText();
         try{
-            pesquisado.setApartamento(Integer.parseInt(txtApartamento.getText()));
-            pesquisado.setTorre(Integer.parseInt(txtTorre.getText()));
-            MoradorController.alterarMorador(txtCpf.getText(),txtNome.getText(), Integer.parseInt(txtTorre.getText()), Integer.parseInt(txtTorre.getText()),txtTelefone.getText(), pesquisado.getUltimoAcesso()); 
+            int apartamento = Integer.parseInt(txtApartamento.getText());
+            int torre = Integer.parseInt(txtTorre.getText());
+            MoradorController.alterarMorador(cpf, nome, apartamento, torre, telefone, data); 
         }catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null, "Numero da torre inválido!");
         }
@@ -373,19 +341,15 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUltimoAcessoActionPerformed
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVoltarActionPerformed
-
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
         String cpf = txtCpf.getText();
-        this.pesquisado = MoradorController.pesquisarMorador(cpf);
-        if(pesquisado != null){
-            txtNome.setText(pesquisado.getNome());
-            txtTelefone.setText(pesquisado.getTelefone());
-            txtApartamento.setText(Integer.toString(pesquisado.getApartamento()));
-            txtTorre.setText(Integer.toString(pesquisado.getTorre()));
-            txtUltimoAcesso.setText(pesquisado.getUltimoAcesso());
+        Morador morador = MoradorController.pesquisarMorador(cpf);
+        if(morador != null){
+            txtNome.setText(morador.getNome());
+            txtTelefone.setText(morador.getTelefone());
+            txtApartamento.setText(Integer.toString(morador.getApartamento()));
+            txtTorre.setText(Integer.toString(morador.getTorre()));
+            txtUltimoAcesso.setText(morador.getUltimoAcesso());
         }        
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
@@ -433,10 +397,8 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterar;
-    private javax.swing.JButton btnAttData;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnPesquisar;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
