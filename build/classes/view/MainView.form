@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="99" type="rgb"/>
     </Property>
@@ -119,15 +119,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnNovoMorador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton8" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnNovoVisitante" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="jButton6" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnNovoEntregador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton7" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnNovoPrestador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton9" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnNovoCorretor" min="-2" pref="86" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -141,11 +141,11 @@
                       <Component id="jLabel2" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnNovoMorador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnNovoEntregador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnNovoPrestador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnNovoVisitante" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnNovoCorretor" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -161,7 +161,7 @@
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnNovoMorador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -174,10 +174,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoMoradorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="btnNovoEntregador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -190,10 +190,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoEntregadorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton7">
+            <Component class="javax.swing.JButton" name="btnNovoPrestador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -206,10 +206,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoPrestadorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton8">
+            <Component class="javax.swing.JButton" name="btnNovoVisitante">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -222,10 +222,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoVisitanteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton9">
+            <Component class="javax.swing.JButton" name="btnNovoCorretor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -238,7 +238,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoCorretorActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -263,15 +263,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton2" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnPesquisarMorador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton12" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnPesquisarVisitante" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="jButton10" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnPesquisarEntregador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton11" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnPesquisarPrestador" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton13" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnPesquisarCorretor" min="-2" pref="86" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -285,11 +285,11 @@
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="8" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton11" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton12" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jButton13" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarMorador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarEntregador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarPrestador" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarVisitante" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarCorretor" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -305,7 +305,7 @@
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnPesquisarMorador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -318,10 +318,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarMoradorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton10">
+            <Component class="javax.swing.JButton" name="btnPesquisarEntregador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -334,10 +334,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarEntregadorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton11">
+            <Component class="javax.swing.JButton" name="btnPesquisarPrestador">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -350,10 +350,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarPrestadorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton12">
+            <Component class="javax.swing.JButton" name="btnPesquisarVisitante">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -366,10 +366,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarVisitanteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton13">
+            <Component class="javax.swing.JButton" name="btnPesquisarCorretor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="2"/>
@@ -382,7 +382,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarCorretorActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

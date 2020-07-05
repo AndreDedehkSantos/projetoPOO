@@ -1,7 +1,5 @@
 package model;
 
-import java.sql.Date;
-
 public class Entregador extends Pessoa {
 
     private String empresa;

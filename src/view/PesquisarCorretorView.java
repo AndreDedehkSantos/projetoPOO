@@ -5,6 +5,9 @@
  */
 package view;
 
+import controller.CorretorController;
+import model.Corretor;
+
 /**
  *
  * @author andre
@@ -36,20 +39,18 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
+        txtCpf = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtCorretora = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        txtCreci = new javax.swing.JTextField();
+        btnPesquisar = new javax.swing.JButton();
+        btnExcluir = new javax.swing.JButton();
+        btnAlterar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        txtUltimoAcesso = new javax.swing.JTextField();
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +70,7 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Apartamento:");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
@@ -87,24 +88,24 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Nome: ");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtNomeActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtCpfActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Cpf:");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        txtCorretora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                txtCorretoraActionPerformed(evt);
             }
         });
 
@@ -114,58 +115,45 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setText("Creci:");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtCreci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtCreciActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton1.setText("Atualizar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnPesquisar.setText("Pesquisar");
+        btnPesquisar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnPesquisarActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton2.setText("Pesquisar");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setText("Excluir");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnExcluir.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnExcluir.setText("Excluir");
+        btnExcluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnExcluirActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton4.setText("Alterar Dados");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnAlterar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnAlterar.setText("Alterar Dados");
+        btnAlterar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnAlterarActionPerformed(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel11.setText("Ultimo Acesso:");
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        txtUltimoAcesso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton5.setText("Voltar");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                txtUltimoAcessoActionPerformed(evt);
             }
         });
 
@@ -192,29 +180,23 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-                                            .addComponent(jTextField5))
+                                            .addComponent(txtCreci, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                                            .addComponent(txtCorretora))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextField1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtNome))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,28 +206,25 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCreci, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(txtCorretora, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -290,49 +269,64 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtCpfActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtCorretoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorretoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtCorretoraActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtCreciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreciActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtCreciActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        String cpf = txtCpf.getText();
+        CorretorController.excluirCorretor(cpf);
+        txtNome.setText("");
+        txtCpf.setText("");
+        txtCreci.setText("");
+        txtCorretora.setText("");
+        txtUltimoAcesso.setText("");
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        String nome = txtNome.getText();
+        String cpf = txtCpf.getText();
+        String creci = txtCreci.getText();
+        String corretora = txtCorretora.getText();
+        String ultimoAcesso = txtUltimoAcesso.getText();
+        CorretorController.alterarCorretor(creci, corretora, nome, cpf, ultimoAcesso);
+    }//GEN-LAST:event_btnAlterarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void txtUltimoAcessoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUltimoAcessoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_txtUltimoAcessoActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
+        String cpf = txtCpf.getText();
+        Corretor corretor = CorretorController.pesquisarCorretor(cpf);
+        if(corretor != null){
+            txtNome.setText(corretor.getNome());
+            txtCpf.setText(corretor.getCpf());
+            txtCreci.setText(corretor.getCreci());
+            txtCorretora.setText(corretor.getCorretora());
+            txtUltimoAcesso.setText(corretor.getUltimoAcesso());
+        }
+    }//GEN-LAST:event_btnPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -385,11 +379,9 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnAlterar;
+    private javax.swing.JButton btnExcluir;
+    private javax.swing.JButton btnPesquisar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -401,12 +393,12 @@ public class PesquisarCorretorView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField txtCorretora;
+    private javax.swing.JTextField txtCpf;
+    private javax.swing.JTextField txtCreci;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtUltimoAcesso;
     // End of variables declaration//GEN-END:variables
 }

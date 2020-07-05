@@ -31,20 +31,20 @@ public class MainView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        btnNovoMorador = new javax.swing.JButton();
+        btnNovoEntregador = new javax.swing.JButton();
+        btnNovoPrestador = new javax.swing.JButton();
+        btnNovoVisitante = new javax.swing.JButton();
+        btnNovoCorretor = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        btnPesquisarMorador = new javax.swing.JButton();
+        btnPesquisarEntregador = new javax.swing.JButton();
+        btnPesquisarPrestador = new javax.swing.JButton();
+        btnPesquisarVisitante = new javax.swing.JButton();
+        btnPesquisarCorretor = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
@@ -59,48 +59,48 @@ public class MainView extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Novo");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton1.setText("Morador");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNovoMorador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnNovoMorador.setText("Morador");
+        btnNovoMorador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNovoMorador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNovoMoradorActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton6.setText("Entregador");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnNovoEntregador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnNovoEntregador.setText("Entregador");
+        btnNovoEntregador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNovoEntregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnNovoEntregadorActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton7.setText("Prestador");
-        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btnNovoPrestador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnNovoPrestador.setText("Prestador");
+        btnNovoPrestador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNovoPrestador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btnNovoPrestadorActionPerformed(evt);
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton8.setText("Visitante");
-        jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btnNovoVisitante.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnNovoVisitante.setText("Visitante");
+        btnNovoVisitante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNovoVisitante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btnNovoVisitanteActionPerformed(evt);
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton9.setText("Corretor");
-        jButton9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnNovoCorretor.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnNovoCorretor.setText("Corretor");
+        btnNovoCorretor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNovoCorretor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnNovoCorretorActionPerformed(evt);
             }
         });
 
@@ -113,15 +113,15 @@ public class MainView extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNovoMorador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNovoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNovoEntregador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNovoPrestador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnNovoCorretor, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -131,11 +131,11 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNovoMorador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNovoEntregador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNovoPrestador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNovoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNovoCorretor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -145,48 +145,48 @@ public class MainView extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Pesquisar");
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton2.setText("Morador");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisarMorador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnPesquisarMorador.setText("Morador");
+        btnPesquisarMorador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarMorador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnPesquisarMoradorActionPerformed(evt);
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton10.setText("Entregador");
-        jButton10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisarEntregador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnPesquisarEntregador.setText("Entregador");
+        btnPesquisarEntregador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarEntregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                btnPesquisarEntregadorActionPerformed(evt);
             }
         });
 
-        jButton11.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton11.setText("Prestador");
-        jButton11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisarPrestador.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnPesquisarPrestador.setText("Prestador");
+        btnPesquisarPrestador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarPrestador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                btnPesquisarPrestadorActionPerformed(evt);
             }
         });
 
-        jButton12.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton12.setText("Visitante");
-        jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisarVisitante.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnPesquisarVisitante.setText("Visitante");
+        btnPesquisarVisitante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarVisitante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnPesquisarVisitanteActionPerformed(evt);
             }
         });
 
-        jButton13.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton13.setText("Corretor");
-        jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisarCorretor.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
+        btnPesquisarCorretor.setText("Corretor");
+        btnPesquisarCorretor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarCorretor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                btnPesquisarCorretorActionPerformed(evt);
             }
         });
 
@@ -199,15 +199,15 @@ public class MainView extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarMorador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarEntregador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarPrestador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnPesquisarCorretor, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -217,11 +217,11 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPesquisarMorador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarEntregador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarPrestador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarCorretor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -273,45 +273,45 @@ public class MainView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    private void btnPesquisarCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarCorretorActionPerformed
+        new PesquisarCorretorView().setVisible(true);
+    }//GEN-LAST:event_btnPesquisarCorretorActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void btnPesquisarVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarVisitanteActionPerformed
         new PesquisarVisitanteView().setVisible(true);
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_btnPesquisarVisitanteActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void btnPesquisarPrestadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarPrestadorActionPerformed
+        new PesquisarPrestadorView().setVisible(true);
+    }//GEN-LAST:event_btnPesquisarPrestadorActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void btnPesquisarEntregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarEntregadorActionPerformed
+        new PesquisarEntregadorView().setVisible(true);
+    }//GEN-LAST:event_btnPesquisarEntregadorActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnPesquisarMoradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarMoradorActionPerformed
         new PesquisarMoradorView().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnPesquisarMoradorActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void btnNovoCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoCorretorActionPerformed
+       new NovoCorretorView().setVisible(true);
+    }//GEN-LAST:event_btnNovoCorretorActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btnNovoVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoVisitanteActionPerformed
         new NovoVisitanteView().setVisible(true);
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_btnNovoVisitanteActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void btnNovoPrestadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoPrestadorActionPerformed
+       new NovoPrestadorView().setVisible(true);
+    }//GEN-LAST:event_btnNovoPrestadorActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btnNovoEntregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoEntregadorActionPerformed
+        new NovoEntregadorView().setVisible(true);
+    }//GEN-LAST:event_btnNovoEntregadorActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnNovoMoradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoMoradorActionPerformed
         new NovoMoradorView().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnNovoMoradorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -349,16 +349,16 @@ public class MainView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnNovoCorretor;
+    private javax.swing.JButton btnNovoEntregador;
+    private javax.swing.JButton btnNovoMorador;
+    private javax.swing.JButton btnNovoPrestador;
+    private javax.swing.JButton btnNovoVisitante;
+    private javax.swing.JButton btnPesquisarCorretor;
+    private javax.swing.JButton btnPesquisarEntregador;
+    private javax.swing.JButton btnPesquisarMorador;
+    private javax.swing.JButton btnPesquisarPrestador;
+    private javax.swing.JButton btnPesquisarVisitante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

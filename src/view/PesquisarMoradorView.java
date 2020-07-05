@@ -320,6 +320,11 @@ public class PesquisarMoradorView extends javax.swing.JFrame {
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         String cpf = txtCpf.getText();
         MoradorController.excluirMorador(cpf);
+        txtNome.setText("");
+        txtCpf.setText("");
+        txtTelefone.setText("");
+        txtApartamento.setText("");
+        txtTorre.setText("");
     }//GEN-LAST:event_btnExcluirActionPerformed
     
     

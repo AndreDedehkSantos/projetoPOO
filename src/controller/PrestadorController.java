@@ -1,12 +1,14 @@
 package controller;
 
-import java.sql.Date;
+import DAO.PrestadorDAO;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import model.Morador;
 import model.Prestador;
 
 public class PrestadorController {
-     public static Prestador validarPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf, boolean cadastrar, String ultimoAcesso){
+    static PrestadorDAO pDao = new PrestadorDAO();
+     public static Prestador validarPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf){
         Morador morador = MoradorController.pesquisarMorador(cpfMorador);
         if(morador == null){
            JOptionPane.showMessageDialog(null, "Rever 'CPF do morador'");
@@ -28,25 +30,49 @@ public class PrestadorController {
             JOptionPane.showMessageDialog(null, "Rever 'CPF'");
             return null;
         }
-        if(cadastrar){
-            /*Prestador existe = prestadorDAO.pesquisar(cpf);
-            if(existe != null){
-                JOptionPane.showMessageDialog(null, "Prestador já cadstrado");
-                return null;
-            }*/
+        Prestador existe = pDao.pesquisar(cpf);
+        if(existe != null){
+            JOptionPane.showMessageDialog(null, "Prestador já cadstrado");
+            return null;
         }
+        java.util.Date agora = new java.util.Date();
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String data = formato.format(agora);
        
+        return new Prestador(categoria, empresa, cpfMorador, nome, cpf, data);
+    }
+     
+    public static Prestador validarPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf, String ultimoAcesso){
+        Morador morador = MoradorController.pesquisarMorador(cpfMorador);
+        if(morador == null){
+           JOptionPane.showMessageDialog(null, "Rever 'CPF do morador'");
+           return null;
+        }
+        if(categoria.equals("")){
+            JOptionPane.showMessageDialog(null, "Rever 'Categoria'");
+            return null;
+        }
+        if(empresa.equals("")){
+            JOptionPane.showMessageDialog(null, "Rever 'Empresa'");
+            return null;
+        }
+        if(nome.equals("")){
+            JOptionPane.showMessageDialog(null, "Rever 'Nome'");
+            return null;
+        }
+        if(cpf.equals("") || cpf.length() != 11 || cpf.matches("[A-Z]")){
+            JOptionPane.showMessageDialog(null, "Rever 'CPF'");
+            return null;
+        }
         return new Prestador(categoria, empresa, cpfMorador, nome, cpf, ultimoAcesso);
     }
      
-    public static boolean definirPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf){     
-        Prestador prestador = validarPrestador(categoria, empresa, cpfMorador, nome, cpf, true, null);
+    public static void definirPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf){     
+        Prestador prestador = validarPrestador(categoria, empresa, cpfMorador, nome, cpf);
         if(prestador != null){
-            /*PrestadorDAO.cadastrar(Prestador);
-            JOptionPane.showMessageDialog(null, "Prestador cadastrado")*/
-            return true;
+            pDao.salvar(prestador);
+            JOptionPane.showMessageDialog(null, "Prestador cadastrado");
         }
-        return false;
     }
    
     public static Prestador pesquisarPrestador(String cpf){
@@ -54,38 +80,29 @@ public class PrestadorController {
             JOptionPane.showMessageDialog(null, "Rever 'CPF'");
             return null;
         }
-        /*Prestador prestador = PrestadorDAO.consultar(cpf);
-        if(morador == null){
+        Prestador prestador = pDao.pesquisar(cpf);
+        if(prestador == null){
             JOptionPane.showMessageDialog(null, "Prestador não encontrado'");
             return null;
+        }else{
+            return prestador;
         }
-        return prestador;*/
-        return null;
     }
    
-    public static boolean alterarPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf, String ultimoAcesso){    
-        Prestador prestador = validarPrestador(categoria, empresa, cpfMorador, nome, cpf, false, ultimoAcesso);
+    public static void alterarPrestador(String categoria, String empresa, String cpfMorador, String nome, String cpf, String ultimoAcesso){    
+        Prestador prestador = validarPrestador(categoria, empresa, cpfMorador, nome, cpf, ultimoAcesso);
         if(prestador != null){
-            /*boolean alterado = PrestadorDAO.alterar(prestador);
-            if(alterado){
-                JOptionPane.showMessageDialog(null, "Prestador alterado");
-                return true;
-            }*/
+            pDao.alterar(prestador);
+            JOptionPane.showMessageDialog(null, "Prestador alterado");
         }
-        JOptionPane.showMessageDialog(null, "Prestador não encontrado");
-        return false;  
     }
    
-    public static boolean excluirPrestador(String cpf){
+    public static void excluirPrestador(String cpf){
         if(cpf.equals("") || cpf.length() != 11){
             JOptionPane.showMessageDialog(null, "Rever 'CPF'");
-            return false;
+        }else{
+             pDao.excluir(cpf);
+             JOptionPane.showMessageDialog(null, "Prestador excluido");
         }
-        /*boolean excluido = Prestador prestador = PrestadorDAO.excluir(cpf);
-        if(excluido){
-            JOptionPane.showMessageDialog(null, "Prestador excluido");
-            return true;
-        }*/
-        return false;
     }
 }

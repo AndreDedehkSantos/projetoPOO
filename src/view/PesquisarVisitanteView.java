@@ -290,6 +290,10 @@ public class PesquisarVisitanteView extends javax.swing.JFrame {
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         String cpf = txtCpf.getText();
         VisitanteController.excluir(cpf);
+        txtNome.setText("");
+        txtCpf.setText("");
+        cbTipo.setSelectedItem("Selecione");
+        txtCpfMorador.setText("");
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed

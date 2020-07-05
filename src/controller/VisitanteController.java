@@ -14,8 +14,8 @@ public class VisitanteController {
      static VisitanteDAO vDAO = new VisitanteDAO();
      public static Visitante validarVisitante(String cpfMorador, TipoVisitante tipo, String nome, String cpf){
         Morador morador = MoradorController.pesquisarMorador(cpfMorador);
-        if(morador == null){
-            JOptionPane.showMessageDialog(null, "Rever 'CPF do Morador'");
+        if(cpf.equals("") || cpf.length() != 11 || cpf.matches("[A-Z]") || cpf.matches("[a - z]")){
+            JOptionPane.showMessageDialog(null, "Rever 'CPF'");
             return null;
         }
         if(tipo == null){
@@ -26,11 +26,7 @@ public class VisitanteController {
             JOptionPane.showMessageDialog(null, "Rever 'Nome'");
             return null;
         }
-        if(cpf.equals("") || cpf.length() != 11 || cpf.matches("[a-z]")){
-            JOptionPane.showMessageDialog(null, "Rever 'CPF'");
-            return null;
-        }
-           
+       
         Visitante existe = vDAO.pesquisar(cpf);
         if (existe != null) {
             JOptionPane.showMessageDialog(null, "Visitante já cadstrado");
@@ -91,7 +87,6 @@ public class VisitanteController {
     public static void alterarVisitante(String cpfMorador, TipoVisitante tipo, String nome, String cpf, String ultimoAcesso){ 
         Visitante visitante = validarVisitante(cpfMorador, tipo, nome, cpf, ultimoAcesso);
         if(visitante != null){
-            vDAO.alterar(visitante);
             vDAO.alterar(visitante);
             JOptionPane.showMessageDialog(null, "Visitante alterado");
         }

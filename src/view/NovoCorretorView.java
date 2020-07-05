@@ -5,6 +5,8 @@
  */
 package view;
 
+import controller.CorretorController;
+
 /**
  *
  * @author andre
@@ -36,15 +38,15 @@ public class NovoCorretorView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
+        txtCpf = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtCreci = new javax.swing.JTextField();
+        btnSalvar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        txtCorretora = new javax.swing.JTextField();
+        btnLimpar = new javax.swing.JButton();
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +66,7 @@ public class NovoCorretorView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Apartamento:");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
@@ -82,15 +84,15 @@ public class NovoCorretorView extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Nome: ");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtNomeActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtCpfActionPerformed(evt);
             }
         });
 
@@ -100,31 +102,36 @@ public class NovoCorretorView extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setText("Creci:");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtCreci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtCreciActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton1.setText("Salvar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalvar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnSalvar.setText("Salvar");
+        btnSalvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel11.setText("Corretora:");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtCorretora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtCorretoraActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setText("Cancelar");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnLimpar.setText("Limpar");
+        btnLimpar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnLimparActionPerformed(evt);
             }
         });
 
@@ -141,22 +148,22 @@ public class NovoCorretorView extends javax.swing.JFrame {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(27, 27, 27)
                                 .addComponent(jLabel10))
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCorretora, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7)))
+                        .addComponent(txtCreci)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -167,7 +174,7 @@ public class NovoCorretorView extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
@@ -175,17 +182,17 @@ public class NovoCorretorView extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtCreci, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCorretora, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -232,13 +239,13 @@ public class NovoCorretorView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtCpfActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -248,17 +255,28 @@ public class NovoCorretorView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtCreciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreciActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtCreciActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtCorretoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorretoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtCorretoraActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        txtNome.setText("");
+        txtCpf.setText("");
+        txtCreci.setText("");
+        txtCorretora.setText("");
+    }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        String nome = txtNome.getText();
+        String cpf = txtCpf.getText();
+        String creci = txtCreci.getText();
+        String corretora = txtCorretora.getText();
+        CorretorController.definirCorretor(creci, corretora, nome, cpf);
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,8 +377,8 @@ public class NovoCorretorView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -371,11 +389,11 @@ public class NovoCorretorView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField txtCorretora;
+    private javax.swing.JTextField txtCpf;
+    private javax.swing.JTextField txtCreci;
+    private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,7 +30,7 @@
     </Component>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="99" type="rgb"/>
     </Property>
@@ -145,24 +145,24 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextField1" alignment="0" min="-2" pref="465" max="-2" attributes="0"/>
+                          <Component id="txtNome" alignment="0" min="-2" pref="465" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jTextField2" min="-2" pref="183" max="-2" attributes="0"/>
+                                      <Component id="txtCpf" min="-2" pref="183" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="jTextField4" min="-2" pref="183" max="-2" attributes="0"/>
+                                      <Component id="txtEmpresa" min="-2" pref="183" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField5" max="32767" attributes="0"/>
-                                  <Component id="jTextField7" max="32767" attributes="0"/>
+                                  <Component id="txtCategoria" max="32767" attributes="0"/>
+                                  <Component id="txtCpfMorador" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -170,9 +170,9 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="btnSalvar" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="btnLimpar" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -185,7 +185,7 @@
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="txtNome" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -195,9 +195,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="txtCpf" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="txtCpfMorador" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -205,17 +205,17 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="txtEmpresa" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jTextField5" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="txtCategoria" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnSalvar" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnLimpar" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -239,14 +239,14 @@
                 <Property name="text" type="java.lang.String" value="Nome: "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="txtNome">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="txtCpf">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCpfActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
@@ -265,12 +265,12 @@
                 <Property name="text" type="java.lang.String" value="Cpf do Morador:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="txtCpfMorador">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCpfMoradorActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnSalvar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="1"/>
@@ -282,6 +282,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalvarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
@@ -291,9 +294,9 @@
                 <Property name="text" type="java.lang.String" value="Empresa:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="txtEmpresa">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmpresaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
@@ -304,17 +307,17 @@
                 <Property name="text" type="java.lang.String" value="Categoria:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="txtCategoria">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCategoriaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="btnLimpar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cancelar"/>
+                <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                     <BevelBorder/>
@@ -322,7 +325,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimparActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

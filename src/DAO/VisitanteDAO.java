@@ -2,14 +2,12 @@
 package DAO;
 
 import entidades.enums.TipoVisitante;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Morador;
 import model.Visitante;
 
 public class VisitanteDAO extends DBController{
@@ -30,7 +28,7 @@ public class VisitanteDAO extends DBController{
                 connection.commit();
             }   
         } catch (SQLException ex) {
-            Logger.getLogger(MoradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VisitanteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             fecharConexao();
         }
@@ -75,7 +73,7 @@ public class VisitanteDAO extends DBController{
                 }            
             }        
         } catch (SQLException ex) {
-            Logger.getLogger(MoradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VisitanteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             fecharConexao();
         }
@@ -95,7 +93,7 @@ public class VisitanteDAO extends DBController{
             stmt.executeUpdate(alterarDados);
             connection.commit();
         } catch (SQLException ex) {
-            Logger.getLogger(MoradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VisitanteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             fecharConexao();
         }
@@ -110,7 +108,7 @@ public class VisitanteDAO extends DBController{
             stmt.executeUpdate(excluirUsuario);
             connection.commit();
         } catch (SQLException ex) {
-            Logger.getLogger(MoradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VisitanteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             fecharConexao();
         }
